@@ -1,6 +1,9 @@
 name: Update ETF prices
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/update-prices.yml"
   schedule:
     - cron: "*/5 * * * 1-5"
 permissions:
